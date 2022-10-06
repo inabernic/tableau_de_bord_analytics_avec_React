@@ -9,7 +9,11 @@ import './Dashboard.css'
 export default function Dashboard() {
     return (
         <div className="container_page">
-            <p> cadre pour la page</p>
+            <div className="nav_horisontal"> cadre pour la page</div>
+            <div className="container_block">
+                <div className="nav_vertical"> les pitogrames</div>
+                <div className="container_info"> les grafiques</div>
+            </div>
         </div>
     )
 }
