@@ -1,6 +1,6 @@
 .container_page {
-    width: 100%;
-    height: 1024px;
+    min-width: 1024px;
+    height: 780px;
 }
 
 .nav_horisontal {
@@ -18,9 +18,14 @@
     width: 117px;
     height: 100%;
     background-color: black;
-    color: white;
 }
 
 .container_info {
     width: 100%;
+}
+
+img {
+    color: black;
+    width: 155px;
+    height: 55px;
 }
