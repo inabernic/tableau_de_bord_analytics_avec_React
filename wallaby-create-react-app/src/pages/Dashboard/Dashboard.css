@@ -13,6 +13,13 @@
     align-items: center;
 }
 
+.cursor_pointer {
+    color: white;
+    text-decoration: inherit;
+    padding-left: 2.5rem;
+    padding-right: 1.5rem;
+}
+
 .container_block {
     display: flex;
     height: 100%;
@@ -22,13 +29,24 @@
     width: 117px;
     height: 100%;
     background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.cursor_pointer {
+.text_vertical {
     color: white;
-    text-decoration: inherit;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    text-align: end;
+    display: block;
+    transform: rotate(-90deg);
+    width: 363px;
+}
+
+.picto_pointer img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 1rem;
 }
 
 .container_info {

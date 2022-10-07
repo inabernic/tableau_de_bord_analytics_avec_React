@@ -20,7 +20,15 @@ export default function Dashboard() {
 
             </div>
             <div className="container_block">
-                <div className="nav_vertical"> les pitogrames</div>
+                <div className="nav_vertical">
+                    <div className='picto'>
+                        <div className='picto_pointer'> <img src="../assets/picto-meditation.png" alt="logoSportSee" /></div>
+                        <div className='picto_pointer'> <img src="../assets/picto-swimming.png" alt="logoSportSee" /></div>
+                        <div className='picto_pointer'> <img src="../assets/picto-cycling.png" alt="logoSportSee" /></div>
+                        <div className='picto_pointer'> <img src="../assets/picto-bodybuilding.png" alt="logoSportSee" /></div>
+                    </div>
+                    <div className='picto_pointer text_vertical' > Copyright, SportSee 2020</div>
+                </div>
                 <div className="container_info"> les grafiques</div>
             </div>
         </div>
