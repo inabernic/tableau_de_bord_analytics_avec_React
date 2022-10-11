@@ -2,12 +2,12 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 //STYLE
-import './Dashboard.css'
+//import './UseIdPage.css'
 
 //----------------------COMPONNETS--------------------
 
 
-export default function Dashboard() {
+export default function UseIdPage() {
     return (
         <div className="container_page">
             <div className="nav_horisontal">
@@ -35,11 +35,8 @@ export default function Dashboard() {
                 </div>
                 <div className="container_info">
                     <div className='info'>
-                        <div className='header_helloName'>Bonjour et Bienvenue
-                            <Link className="navigation_user" to="/user/:id"><span> User 12</span>
-                            </Link>,
-                            <Link className="navigation_user" to="/user/:id"><span> User 18</span>
-                            </Link>
+                        <div className='header_helloName'>Bonjour <span> User 12</span>
+                        
                         </div>
 
                         <div className='header_text'>Félicitation! Vous avez explosé vos objectifs hier <img src="../assets/icon_hands.png" alt="icon_hands" /></div>
