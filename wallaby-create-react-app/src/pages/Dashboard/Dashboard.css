@@ -5,8 +5,12 @@
 
 .nav_horisontal {
     width: 100%;
-    height: 91px;
     background-color: black;
+}
+
+.nav {
+    width: 97%;
+    height: 91px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -50,11 +54,106 @@
 }
 
 .container_info {
-    width: 100%;
+    width: 82%;
+    margin-left: 4rem;
+    margin-top: 3rem;
 }
 
 img {
     color: black;
     width: 155px;
     height: 55px;
+}
+
+.info {
+    width: 100%;
+    border: 1px solid black;
+}
+
+.header_helloName {
+    width: 100%;
+    height: 50px;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+span {
+    color: red;
+}
+
+.header_text {
+    width: 414px;
+    height: 24px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.header_text img {
+    width: 20px;
+    height: 20px;
+}
+
+.info_block {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.info_activity,
+.info_graphic {
+    background-color: #FBFBFB;
+    margin-bottom: 1rem;
+}
+
+.info_activity {
+    width: 835px;
+    height: 320px;
+    border-radius: 5px;
+}
+
+.info_graphic {
+    display: flex;
+    justify-content: space-between;
+    ;
+}
+
+.info_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.grafic {
+    width: 258px;
+    height: 260px;
+    border: 1px solid rgb(17, 216, 17);
+}
+
+.calories,
+.proteines,
+.glucides,
+.lipides {
+    background-color: #FBFBFB;
+    margin-bottom: 1rem;
+    width: 258px;
+    height: 124px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #FBFBFB;
+}
+
+.indice {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.picto img {
+    width: 60px;
+    height: 60px;
 }
