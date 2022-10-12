@@ -35,9 +35,10 @@ export default function Error() {
                 </div>
                 <div className="container_info">
                     <div className='info'>
-                        <div className='header_helloName'>Erreur 404
+                        <div className='header_helloName error'>Erreur 404
                         </div>
                     </div>
+                    <div>  <Link className="link" to="/"><div className='cursor'> --- lien vers la page principale --- </div></Link></div>
                 </div>
             </div>
         </div >
