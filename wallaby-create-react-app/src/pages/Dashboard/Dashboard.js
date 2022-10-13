@@ -60,7 +60,7 @@ export default function Dashboard() {
                             <div className='calories'>
                                 <div className='picto'><img src="../assets/icon_calories.png" alt="icon_calories" /></div>
                                 <div className='block_indice'>
-                                    <div className='indice'>recuperation indice</div>
+                                    <div className='indice'>193057kl</div>
                                     <div>Calories</div>
                                 </div>
                             </div>
@@ -68,7 +68,7 @@ export default function Dashboard() {
                             <div className='proteines'>
                                 <div className='picto'><img src="../assets/icon-proteines.png" alt="icon_proteines" /></div>
                                 <div className='block_indice'>
-                                    <div className='indice'>recuperation indice</div>
+                                    <div className='indice'>193057kl</div>
                                     <div>Proteines</div>
                                 </div>
                             </div>
@@ -76,7 +76,7 @@ export default function Dashboard() {
                             <div className='glucides'>
                                 <div className='picto'><img src="../assets/icon-glucides.png" alt="icon_glucides" /></div>
                                 <div className='block_indice'>
-                                    <div className='indice'>recuperation indice</div>
+                                    <div className='indice'>193057kl</div>
                                     <div>Glucides</div>
                                 </div>
                             </div>
@@ -84,7 +84,7 @@ export default function Dashboard() {
                             <div className='lipides'>
                                 <div className='picto'><img src="../assets/icon-lipides.png" alt="icon_lipides" /></div>
                                 <div className='block_indice'>
-                                    <div className='indice'>recuperation indice</div>
+                                    <div className='indice'>7 kl</div>
                                     <div>Lipides</div>
                                 </div>
                             </div>

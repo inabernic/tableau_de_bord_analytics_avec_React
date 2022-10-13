@@ -1,5 +1,7 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+//import './../../../data/data.json'
 
 //STYLE
 //import './UseIdPage.css'
@@ -8,6 +10,37 @@ import { Link } from 'react-router-dom'
 
 
 export default function UseIdPage() {
+
+    const [USER_MAIN_DATA , setUSER_MAIN_DATA ] = useState({
+        userInfos: {firstName:'', lastname:'', age:''},
+        todayScore: '',
+         keyData: {  calorieCount: '', proteinCount: '', carbohydrateCount:'',    lipidCount:'' },
+      })
+    
+      let { id } = useParams()
+    
+     useEffect(
+        function () {
+          fetch(' http://localhost:3000/user/' + {id})
+            .then((response) => {
+              return response.json()
+            })
+            .then((data) => {
+              console.log(data)
+              setUSER_MAIN_DATA(data)
+            })
+        },
+        [id]
+      )
+
+
+
+
+
+
+
+
+
     return (
         <div className="container_page">
             <div className="nav_horisontal">
@@ -35,7 +68,7 @@ export default function UseIdPage() {
                 </div>
                 <div className="container_info">
                     <div className='info'>
-                        <div className='header_helloName'>Bonjour <span> User 12</span>
+                        <div className='header_helloName'>Bonjour <span> {USER_MAIN_DATA.userInfos.firstName} </span>
                         
                         </div>
 
