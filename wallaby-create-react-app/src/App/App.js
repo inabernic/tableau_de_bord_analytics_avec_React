@@ -14,9 +14,6 @@ export default function App() {
     <Routes>
       <Route exact path="/" element={<Dashboard />} />
       <Route exact path="/user/:id" element={<UserIdPage />} />
-      <Route exact path="/user/:id/activity" element={<UserIdPage />} />
-      <Route exact path="/user/:id/average-session" element={<UserIdPage />} />
-      <Route exact path="/user/:id/performance" element={<UserIdPage />} />
       <Route path='/*' exact={true} element={<Error />} />
     </Routes>
   );

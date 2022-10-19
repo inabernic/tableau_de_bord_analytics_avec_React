@@ -1,45 +1,36 @@
+import env from "react-dotenv";
 import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import React, { useState, useEffect } from 'react'
-//import './../../../data/data.json'
+import { getUserInfos } from '../../services/data'
+import UserInfos from '../../components/UserInfos';
+import { getMockedUserInfos } from '../../services/mockedData'
+
 
 //STYLE
-//import './UseIdPage.css'
+import './UserIdPage.css'
 
 //----------------------COMPONNETS--------------------
 
+export default function UserIdPage() {
+    const [data, setData] = useState([]);
+	const {id} = useParams();
+    console.log(env.REACT_APP_MOCKED);
 
-export default function UseIdPage() {
-
-    const [USER_MAIN_DATA , setUSER_MAIN_DATA ] = useState({
-        userInfos: {firstName:'', lastname:'', age:''},
-        todayScore: '',
-         keyData: {  calorieCount: '', proteinCount: '', carbohydrateCount:'',    lipidCount:'' },
-      })
-    
-      let { id } = useParams()
-    
-     useEffect(
-        function () {
-          fetch(' http://localhost:3000/user/' + {id})
-            .then((response) => {
-              return response.json()
-            })
-            .then((data) => {
-              console.log(data)
-              setUSER_MAIN_DATA(data)
-            })
-        },
-        [id]
-      )
-
-
-
-
-
-
-
-
+   useEffect(() => {
+		const getData = async () => {
+            let request ="";
+            if(env.REACT_APP_MOCKED){
+			    request = await getMockedUserInfos(id)
+            }else{
+                request = await getUserInfos(id) 
+            };
+			if (!request) return alert('data error');
+			setData(request);
+		};
+		getData();
+	}, [id]);
+	if (data.length === 0) return null; 
 
     return (
         <div className="container_page">
@@ -68,8 +59,7 @@ export default function UseIdPage() {
                 </div>
                 <div className="container_info">
                     <div className='info'>
-                        <div className='header_helloName'>Bonjour <span> {USER_MAIN_DATA.userInfos.firstName} </span>
-                        
+                        <div className='header_helloName'>Bonjour et Bienvenue <span>{data.userInfos.firstName}</span>
                         </div>
 
                         <div className='header_text'>Félicitation! Vous avez explosé vos objectifs hier <img src="../assets/icon_hands.png" alt="icon_hands" /></div>
@@ -90,15 +80,17 @@ export default function UseIdPage() {
                             <div className='calories'>
                                 <div className='picto'><img src="../assets/icon_calories.png" alt="icon_calories" /></div>
                                 <div className='block_indice'>
-                                    <div className='indice'>recuperation indice</div>
+                                    <div className='indice'>
+                                     {`${data.keyData.calorieCount}kCal`} 
+                                        </div>
                                     <div>Calories</div>
                                 </div>
                             </div>
 
                             <div className='proteines'>
                                 <div className='picto'><img src="../assets/icon-proteines.png" alt="icon_proteines" /></div>
-                                <div className='block_indice'>
-                                    <div className='indice'>recuperation indice</div>
+                                <div className='block_indice'> 
+                                    <div className='indice'>{`${data.keyData.proteinCount}g`}</div>
                                     <div>Proteines</div>
                                 </div>
                             </div>
@@ -106,7 +98,7 @@ export default function UseIdPage() {
                             <div className='glucides'>
                                 <div className='picto'><img src="../assets/icon-glucides.png" alt="icon_glucides" /></div>
                                 <div className='block_indice'>
-                                    <div className='indice'>recuperation indice</div>
+                                    <div className='indice'>{`${data.keyData.carbohydrateCount}g`}</div>
                                     <div>Glucides</div>
                                 </div>
                             </div>
@@ -114,7 +106,7 @@ export default function UseIdPage() {
                             <div className='lipides'>
                                 <div className='picto'><img src="../assets/icon-lipides.png" alt="icon_lipides" /></div>
                                 <div className='block_indice'>
-                                    <div className='indice'>recuperation indice</div>
+                                    <div className='indice'>{`${data.keyData.lipidCount}g`}</div>
                                     <div>Lipides</div>
                                 </div>
                             </div>

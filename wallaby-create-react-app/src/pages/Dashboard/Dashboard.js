@@ -8,6 +8,10 @@ import './Dashboard.css'
 
 
 export default function Dashboard() {
+
+    console.log(process.env.REACT_APP_API_KEY);
+
+
     return (
         <div className="container_page">
             <div className="nav_horisontal">
@@ -36,9 +40,9 @@ export default function Dashboard() {
                 <div className="container_info">
                     <div className='info'>
                         <div className='header_helloName'>Bonjour et Bienvenue
-                            <Link className="navigation_user" to="/user/:id"><span> User 12</span>
+                            <Link className="navigation_user" to="/user/12"><span> User 12 </span>
                             </Link>,
-                            <Link className="navigation_user" to="/user/:id"><span> User 18</span>
+                            <Link className="navigation_user" to="/user/18"><span> User 18</span>
                             </Link>
                         </div>
 
@@ -68,7 +72,7 @@ export default function Dashboard() {
                             <div className='proteines'>
                                 <div className='picto'><img src="../assets/icon-proteines.png" alt="icon_proteines" /></div>
                                 <div className='block_indice'>
-                                    <div className='indice'>193057kl</div>
+                                    <div className='indice'>193057g</div>
                                     <div>Proteines</div>
                                 </div>
                             </div>
@@ -76,7 +80,7 @@ export default function Dashboard() {
                             <div className='glucides'>
                                 <div className='picto'><img src="../assets/icon-glucides.png" alt="icon_glucides" /></div>
                                 <div className='block_indice'>
-                                    <div className='indice'>193057kl</div>
+                                    <div className='indice'>193057g</div>
                                     <div>Glucides</div>
                                 </div>
                             </div>
@@ -84,7 +88,7 @@ export default function Dashboard() {
                             <div className='lipides'>
                                 <div className='picto'><img src="../assets/icon-lipides.png" alt="icon_lipides" /></div>
                                 <div className='block_indice'>
-                                    <div className='indice'>7 kl</div>
+                                    <div className='indice'>7 g</div>
                                     <div>Lipides</div>
                                 </div>
                             </div>
