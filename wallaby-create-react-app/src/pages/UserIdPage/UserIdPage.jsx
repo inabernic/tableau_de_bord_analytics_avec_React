@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import React, { useState, useEffect } from 'react'
 import { getUserInfos } from '../../services/data'
-import UserInfos from '../../components/UserInfos';
 import { getMockedUserInfos } from '../../services/mockedData'
+
+import { ActivityChartForDay } from "../../components/ActivityChartForDay";
 
 
 //STYLE
@@ -67,7 +68,9 @@ export default function UserIdPage() {
 
                     <div className='info_block'>
                         <div className='info_left'>
-                            <div className='info_activity'>Activité quotidienne</div>
+                            <div className='info_activity'>
+                            <ActivityChartForDay />
+                            </div>
 
                             <div className='info_graphic'>
                                 <div className='grafic'>grafic 1</div>

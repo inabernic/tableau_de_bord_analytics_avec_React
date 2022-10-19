@@ -1,0 +1,23 @@
+.activity_chart {
+    position: relative;
+    height: 250px;
+    border-radius: 5px;
+    background: #FBFBFB;
+}
+
+.activity_chart h2 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.daily_chart {
+    background-color: #E60000;
+    color: white;
+    font-size: 8px;
+    padding: 2.5px;
+}
+
+.daily_chart p {
+    padding: 2.5px;
+}

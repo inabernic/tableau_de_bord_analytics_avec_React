@@ -31,10 +31,11 @@ export const getMockedUserInfos = async (id) => {
  * @param {string} id User id
  * @returns {object} Response
  */
-export const mockUserActivity = async (id) => {
+export const mockedUserActivity = async (id) => {
 	try {
-		const res = await axios.get(`./../../${id}/activity.json`);
-		return res.data;
+		const res = USER_ACTIVITY.filter((el) => el.id == id);
+		console.log(res[0])
+		return res[0];
 	} catch (e) {
 		console.log(e);
 	}
