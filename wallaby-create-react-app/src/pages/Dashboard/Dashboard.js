@@ -8,10 +8,6 @@ import './Dashboard.css'
 
 
 export default function Dashboard() {
-
-    console.log(process.env.REACT_APP_API_KEY);
-
-
     return (
         <div className="container_page">
             <div className="nav_horisontal">

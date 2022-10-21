@@ -16,14 +16,13 @@ import './UserIdPage.css'
 export default function UserIdPage() {
     const [data, setData] = useState([]);
 	const {id} = useParams();
-    console.log(env.REACT_APP_MOCKED);
+    console.log(process.env.REACT_APP_MOCKED);
 
    useEffect(() => {
 		const getData = async () => {
-            let request ="";
-            if(env.REACT_APP_MOCKED){
-			    request = await getMockedUserInfos(id)
-            }else{
+            let request =await getMockedUserInfos(id);
+            if(process.env.REACT_APP_MOCKED === "false"){
+                console.log("real server call");
                 request = await getUserInfos(id) 
             };
 			if (!request) return alert('data error');
@@ -69,7 +68,7 @@ export default function UserIdPage() {
                     <div className='info_block'>
                         <div className='info_left'>
                             <div className='info_activity'>
-                            <ActivityChartForDay />
+                            <ActivityChartForDay/>
                             </div>
 
                             <div className='info_graphic'>

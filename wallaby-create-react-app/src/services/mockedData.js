@@ -1,4 +1,4 @@
-import axios from 'axios';
+//import axios from 'axios';
 import {
 	USER_ACTIVITY,
 	USER_AVERAGE_SESSIONS,
@@ -17,7 +17,7 @@ import {
 export const getMockedUserInfos = async (id) => {
 	try {
 		const res = USER_MAIN_DATA.filter((el) => el.id == id);
-		console.log(res[0])
+		//console.log(res[0])
 		return res[0];
 	} catch (e) {
 		console.log(e);
@@ -33,8 +33,8 @@ export const getMockedUserInfos = async (id) => {
  */
 export const mockedUserActivity = async (id) => {
 	try {
-		const res = USER_ACTIVITY.filter((el) => el.id == id);
-		console.log(res[0])
+		const res = USER_ACTIVITY.filter((el) => el.id === id);
+		console.log(res)
 		return res[0];
 	} catch (e) {
 		console.log(e);
@@ -49,8 +49,8 @@ export const mockedUserActivity = async (id) => {
  */
 export const mockUserAverageSessions = async (id) => {
 	try {
-		const res = await axios.get(`./../../${id}/averagesessions.json`);
-		return res.data;
+		const res = USER_AVERAGE_SESSIONS.filter((el) => el.id === id);
+		return res;
 	} catch (e) {
 		console.log(e);
 	}
@@ -64,8 +64,8 @@ export const mockUserAverageSessions = async (id) => {
  */
 export const mockUserPerformance = async (id) => {
 	try {
-		const res = await axios.get(`./../../${id}/performance.json`);
-		return res.data;
+		const res = USER_PERFORMANCE.filter((el) => el.id === id);
+		return res;
 	} catch (e) {
 		console.log(e);
 	}
