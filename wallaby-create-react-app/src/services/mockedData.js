@@ -16,7 +16,7 @@ import {
 
 export const getMockedUserInfos = async (id) => {
 	try {
-		const res = USER_MAIN_DATA.filter((el) => el.id == id);
+		let res = USER_MAIN_DATA.filter((el) => el.id == id);
 		//console.log(res[0])
 		return res[0];
 	} catch (e) {
@@ -33,8 +33,8 @@ export const getMockedUserInfos = async (id) => {
  */
 export const mockedUserActivity = async (id) => {
 	try {
-		const res = USER_ACTIVITY.filter((el) => el.id === id);
-		console.log(res)
+		let res = USER_ACTIVITY.filter((el) => el.userId == id);
+		//console.log(res);
 		return res[0];
 	} catch (e) {
 		console.log(e);

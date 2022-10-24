@@ -1,11 +1,9 @@
-import env from "react-dotenv";
 import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import React, { useState, useEffect } from 'react'
 import { getUserInfos } from '../../services/data'
 import { getMockedUserInfos } from '../../services/mockedData'
-
-import { ActivityChartForDay } from "../../components/ActivityChartForDay";
+import ActivityChartForDay from '../../components/ActivityChartForDay'
 
 
 //STYLE
@@ -16,7 +14,7 @@ import './UserIdPage.css'
 export default function UserIdPage() {
     const [data, setData] = useState([]);
 	const {id} = useParams();
-    console.log(process.env.REACT_APP_MOCKED);
+    //console.log(process.env.REACT_APP_MOCKED);
 
    useEffect(() => {
 		const getData = async () => {
@@ -68,7 +66,7 @@ export default function UserIdPage() {
                     <div className='info_block'>
                         <div className='info_left'>
                             <div className='info_activity'>
-                            <ActivityChartForDay/>
+                            <ActivityChartForDay></ActivityChartForDay>
                             </div>
 
                             <div className='info_graphic'>
