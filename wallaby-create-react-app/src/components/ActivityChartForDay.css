@@ -1,3 +1,8 @@
+.title_activity {
+    position: relative;
+    left: 35px;
+}
+
 .activity_chart {
     position: relative;
     height: 250px;
@@ -5,19 +10,17 @@
     background: #FBFBFB;
 }
 
-.activity_chart h2 {
-    position: absolute;
-    top: 20px;
-    left: 20px;
+.recharts-default-legend {
+    padding-bottom: -3.3em;
 }
 
-.daily_chart {
+.daily_chart_tooltip {
     background-color: #E60000;
     color: white;
     font-size: 8px;
     padding: 2.5px;
 }
 
-.daily_chart p {
+.daily_chart_tooltip p {
     padding: 2.5px;
 }
