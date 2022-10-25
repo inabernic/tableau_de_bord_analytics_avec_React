@@ -41,10 +41,59 @@ export default function Dashboard() {
                             <Link className="navigation_user" to="/user/18"><span> User 18</span>
                             </Link>
                         </div>
-                        <div className='header_text'>Allez, visualisez les performances de nos Users !</div>
+
+                        <div className='header_text'>Félicitation! Vous avez explosé vos objectifs hier <img src="../assets/icon_hands.png" alt="icon_hands" /></div>
                     </div>
+
+                    <div className='info_block'>
+                        <div className='info_left'>
+                            <div className='info_activity'>Activité quotidienne</div>
+
+                            <div className='info_graphic'>
+                                <div className='grafic'>grafic 1</div>
+                                <div className='grafic'>grafic 2</div>
+                                <div className='grafic'>grafic 3</div>
+                            </div>
+                        </div>
+
+                        <div className='info_right'>
+                            <div className='calories'>
+                                <div className='picto'><img src="../assets/icon_calories.png" alt="icon_calories" /></div>
+                                <div className='block_indice'>
+                                    <div className='indice'>193057kl</div>
+                                    <div>Calories</div>
+                                </div>
+                            </div>
+
+                            <div className='proteines'>
+                                <div className='picto'><img src="../assets/icon-proteines.png" alt="icon_proteines" /></div>
+                                <div className='block_indice'>
+                                    <div className='indice'>193057g</div>
+                                    <div>Proteines</div>
+                                </div>
+                            </div>
+
+                            <div className='glucides'>
+                                <div className='picto'><img src="../assets/icon-glucides.png" alt="icon_glucides" /></div>
+                                <div className='block_indice'>
+                                    <div className='indice'>193057g</div>
+                                    <div>Glucides</div>
+                                </div>
+                            </div>
+
+                            <div className='lipides'>
+                                <div className='picto'><img src="../assets/icon-lipides.png" alt="icon_lipides" /></div>
+                                <div className='block_indice'>
+                                    <div className='indice'>7 g</div>
+                                    <div>Lipides</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
                 </div>
-            </div >
+            </div>
         </div >
     )
 }
