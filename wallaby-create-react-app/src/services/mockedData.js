@@ -49,7 +49,7 @@ export const mockedUserActivity = async (id) => {
  */
 export const mockUserAverageSessions = async (id) => {
 	try {
-		const res = USER_AVERAGE_SESSIONS.filter((el) => el.id === id);
+		const res = USER_AVERAGE_SESSIONS.filter((el) => el.id == id);
 		return res;
 	} catch (e) {
 		console.log(e);
@@ -64,7 +64,7 @@ export const mockUserAverageSessions = async (id) => {
  */
 export const mockUserPerformance = async (id) => {
 	try {
-		const res = USER_PERFORMANCE.filter((el) => el.id === id);
+		const res = USER_PERFORMANCE.filter((el) => el.id == id);
 		return res;
 	} catch (e) {
 		console.log(e);

@@ -4,6 +4,8 @@ import React, { useState, useEffect } from 'react'
 import { getUserInfos } from '../../services/data'
 import { getMockedUserInfos } from '../../services/mockedData'
 import ActivityChartForDay from '../../components/ActivityChartForDay'
+import PerformanceRadarChart from'../../components/PerformanceRadarChart/PerformanceRadarChart'
+import DurationSession from '../../components/DurationSessionChart/DurationSessionChart'
 
 
 //STYLE
@@ -66,12 +68,12 @@ export default function UserIdPage() {
                     <div className='info_block'>
                         <div className='info_left'>
                             <div className='info_activity'>
-                            <ActivityChartForDay></ActivityChartForDay>
+                            <ActivityChartForDay/>
                             </div>
 
                             <div className='info_graphic'>
-                                <div className='grafic'>grafic 1</div>
-                                <div className='grafic'>grafic 2</div>
+                                <div className='grafic'><DurationSession/></div>
+                                <div className='grafic'><PerformanceRadarChart/></div>
                                 <div className='grafic'>grafic 3</div>
                             </div>
                         </div>

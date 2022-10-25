@@ -1,0 +1,22 @@
+.average_duration_chart {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: #FF0000;
+    color: white;
+    border-radius: 5px;
+}
+
+.average_duration_chart h2 {
+    opacity: 0.5;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    max-width: 110px;
+}
+
+.average_duration_tooltip {
+    background-color: white;
+    color: black;
+    padding: 1px 5px 1px 5px;
+}
