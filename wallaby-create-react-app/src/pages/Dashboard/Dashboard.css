@@ -89,6 +89,12 @@ span {
     font-weight: 400;
 }
 
+.text_info {
+    text-align: center;
+    padding: 2rem;
+    font-size: 2rem;
+}
+
 .header_text img {
     width: 20px;
     height: 20px;
