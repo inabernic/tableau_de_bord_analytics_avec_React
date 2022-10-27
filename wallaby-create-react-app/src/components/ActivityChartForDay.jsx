@@ -32,21 +32,18 @@ export default function ActivityChartForDay() {
 
     const CustomLegendText = (value) => {
       return (
-          <>
           <span style={{ color: "#74798C" }}>{value}</span>
-          </>
       )
   }
 
   const CustomTooltip = ({payload, active}) => {
     if (active) {
         return (
-            <>
             <div className="daily_chart_tooltip">
                 <p>{payload[0].value}kg</p>
                 <p>{payload[1].value}Kcal</p>
             </div>
-            </>
+
         )
     }
     return null
@@ -62,7 +59,7 @@ export default function ActivityChartForDay() {
               <YAxis type="number" tickCount={3} tickLine={false} dataKey="calories" axisLine={false} orientation="right" tick={{fontSize: 12}} stroke="#74798C"/>
               <XAxis tickLine={false} axisLine={false} tick={{fontSize: 12}} stroke="#74798C"/>
               <Tooltip wrapperStyle={{ top: -50, left: 10 }} content={<CustomTooltip />}/>
-              <Legend wrapperStyle={{paddingTop: "15px"}} formatter={CustomLegendText} height={50} iconSize={8} iconType="circle" align="right" verticalAlign="top"/>
+              <Legend wrapperStyle={{paddingTop: "15px", bottom: "240px"}} formatter={CustomLegendText} height={50} iconSize={8} iconType="circle" align="right" verticalAlign="top"/>
               <Bar name="Poids (kg)" radius={[10, 10, 0, 0]} stroke-linejoin={10} barSize={10} dataKey="kilogram" fill="#282D30"/>
               <Bar name="Calories brûlées (kCal)" radius={[10, 10, 0, 0]} barSize={10} dataKey="calories" fill="#E60000"/>
           </BarChart>
