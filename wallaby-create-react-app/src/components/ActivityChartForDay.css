@@ -10,6 +10,15 @@
     background: #FBFBFB;
 }
 
+.activity_chart h2 {
+    margin-inline-start: 1em;
+    color: black;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 500;
+}
+
+
 .recharts-default-legend {
     padding-bottom: -3.3em;
 }

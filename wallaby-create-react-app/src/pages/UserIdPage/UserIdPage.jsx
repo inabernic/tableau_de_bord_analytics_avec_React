@@ -5,7 +5,7 @@ import { getUserInfos } from '../../services/data'
 import { getMockedUserInfos } from '../../services/mockedData'
 import ActivityChartForDay from '../../components/ActivityChartForDay'
 import PerformanceRadarChart from'../../components/PerformanceRadarChart/PerformanceRadarChart'
-import DurationSession from '../../components/DurationSessionChart/DurationSessionChart'
+import DurationSessionChart from '../../components/DurationSessionChart/DurationSessionChart'
 
 
 //STYLE
@@ -21,6 +21,7 @@ export default function UserIdPage() {
    useEffect(() => {
 		const getData = async () => {
             let request =await getMockedUserInfos(id);
+            //console.log(request);
             if(process.env.REACT_APP_MOCKED === "false"){
                 console.log("real server call");
                 request = await getUserInfos(id) 
@@ -59,7 +60,7 @@ export default function UserIdPage() {
                 </div>
                 <div className="container_info">
                     <div className='info'>
-                        <div className='header_helloName'>Bonjour et Bienvenue <span>{data.userInfos.firstName}</span>
+                        <div className='header_helloName'>Bonjour <span>{data.userInfos.firstName}</span>
                         </div>
 
                         <div className='header_text'>Félicitation! Vous avez explosé vos objectifs hier <img src="../assets/icon_hands.png" alt="icon_hands" /></div>
@@ -68,14 +69,19 @@ export default function UserIdPage() {
                     <div className='info_block'>
                         <div className='info_left'>
                             <div className='info_activity'>
-                            <ActivityChartForDay/>
+                            <Link className='link_activity' to="./activity"><ActivityChartForDay/></Link> 
                             </div>
 
                             <div className='info_graphic'>
-                                <div className='grafic'><DurationSession/></div>
-                                <div className='grafic'><PerformanceRadarChart/></div>
-                                <div className='grafic'>grafic 3</div>
+                                <div className='grafic'> 
+                                    <Link  to="./average-sessions"><DurationSessionChart/></Link>
+                                </div>
+                                <div className='grafic'>
+                                    <Link to="./performance"><PerformanceRadarChart/></Link>
+                                </div>
+                                <div className='grafic'>grafic 3 </div>
                             </div>
+
                         </div>
 
                         <div className='info_right'>

@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts'
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
@@ -14,6 +13,19 @@ export default function ActivityChartForDay() {
 	const {id} = useParams();
    // console.log(process.env.REACT_APP_MOCKED);
 
+
+
+
+   /*    // replace the number index with the day index
+      let days = {1: "L", 2: "M", 3: "M", 4: "J", 5: "V", 6: "S", 7: "D"}
+      let average = data.USER_AVERAGE_SESSIONS
+      for (let element of average) {
+          if (element.day in days) {
+              element.day = days[element.day]
+          }
+      } */
+
+      
     useEffect(() => {
       const getData = async () => {
               let request =await mockedUserActivity(id);
@@ -52,12 +64,16 @@ export default function ActivityChartForDay() {
     return (
 
       <div className="activity_chart">
-      <h2>Acitvité quotidienne</h2>
+      <h2>Activité quotidienne</h2>
       <ResponsiveContainer width="100%" height="100%">
           <BarChart data={data.sessions} barGap={5} barCategoryGap={25} strokeDasharray="1 4">
               <CartesianGrid vertical={false}/>
-              <YAxis type="number" tickCount={3} tickLine={false} dataKey="calories" axisLine={false} orientation="right" tick={{fontSize: 12}} stroke="#74798C"/>
-              <XAxis tickLine={false} axisLine={false} tick={{fontSize: 12}} stroke="#74798C"/>
+              <YAxis type="number" 
+                 
+            tickCount={3} tickLine={false} dataKey="calories" axisLine={false} orientation="right" tick={{fontSize: 12}} stroke="#74798C"/>
+              <XAxis 
+          
+              tickLine={false} axisLine={false} tick={{fontSize: 12}} stroke="#74798C"/>
               <Tooltip wrapperStyle={{ top: -50, left: 10 }} content={<CustomTooltip />}/>
               <Legend wrapperStyle={{paddingTop: "15px", bottom: "240px"}} formatter={CustomLegendText} height={50} iconSize={8} iconType="circle" align="right" verticalAlign="top"/>
               <Bar name="Poids (kg)" radius={[10, 10, 0, 0]} stroke-linejoin={10} barSize={10} dataKey="kilogram" fill="#282D30"/>

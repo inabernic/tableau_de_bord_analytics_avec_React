@@ -17,7 +17,7 @@ import {
 export const getMockedUserInfos = async (id) => {
 	try {
 		let res = USER_MAIN_DATA.filter((el) => el.id == id);
-		//console.log(res[0])
+		//console.log(res)
 		return res[0];
 	} catch (e) {
 		console.log(e);
@@ -49,8 +49,9 @@ export const mockedUserActivity = async (id) => {
  */
 export const mockUserAverageSessions = async (id) => {
 	try {
-		const res = USER_AVERAGE_SESSIONS.filter((el) => el.id == id);
-		return res;
+		const res = USER_AVERAGE_SESSIONS.filter((el) => el.userId == id);
+		//console.log(res[0]);
+		return res[0];
 	} catch (e) {
 		console.log(e);
 	}
@@ -64,7 +65,8 @@ export const mockUserAverageSessions = async (id) => {
  */
 export const mockUserPerformance = async (id) => {
 	try {
-		const res = USER_PERFORMANCE.filter((el) => el.id == id);
+		const res = USER_PERFORMANCE.filter((el) => el.userId == id);
+		//console.log(res[0]);
 		return res;
 	} catch (e) {
 		console.log(e);

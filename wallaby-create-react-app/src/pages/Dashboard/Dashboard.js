@@ -42,17 +42,17 @@ export default function Dashboard() {
                             </Link>
                         </div>
 
-                        <div className='text_info'>Félicitation! Vous avez explosé vos objectifs hier </div>
+                        <div className='text_info'>Vous allez visualiser les performance de nos 2 Users </div>
                     </div>
 
                     <div className='info_block'>
                         <div className='info_left'>
-                            <div className='info_activity'>Activité quotidienne</div>
+                            <div className='info_activity'>Activité quotidienne, ActivityChartForDay</div>
 
                             <div className='info_graphic'>
-                                <div className='grafic'>grafic 1</div>
-                                <div className='grafic'>grafic 2</div>
-                                <div className='grafic'>grafic 3</div>
+                                <div className='grafic'>DurationSessionChart</div>
+                                <div className='grafic'>PerformanceRadarChart</div>
+                                <div className='grafic'>The score of the user</div>
                             </div>
                         </div>
 
