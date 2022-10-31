@@ -15,12 +15,12 @@
 
 .grafic_container {
     height: 86%;
+    padding: 0.5rem;
 }
 
 .average_duration_chart h2 {
     opacity: 0.5;
     position: absolute;
-    top: 20px;
     left: 20px;
     max-width: 110px;
     font-size: 15px;
