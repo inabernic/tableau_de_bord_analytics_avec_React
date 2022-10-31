@@ -11,20 +11,6 @@ import './ActivityChartForDay.css'
 export default function ActivityChartForDay() {
   const [data, setData] = useState([]);
 	const {id} = useParams();
-   // console.log(process.env.REACT_APP_MOCKED);
-
-
-
-
-   /*    // replace the number index with the day index
-      let days = {1: "L", 2: "M", 3: "M", 4: "J", 5: "V", 6: "S", 7: "D"}
-      let average = data.USER_AVERAGE_SESSIONS
-      for (let element of average) {
-          if (element.day in days) {
-              element.day = days[element.day]
-          }
-      } */
-
       
     useEffect(() => {
       const getData = async () => {

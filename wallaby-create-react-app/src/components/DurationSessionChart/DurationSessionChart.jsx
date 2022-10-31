@@ -48,16 +48,25 @@ export default function DurationSessionChart () {
     return null
 } 
 
+
         return (
             <div className="average_duration_chart">
+                <div className='text_container'>
                 <h2>Durée moyenne des sessions</h2>
+                </div>
+
+                <div className='grafic_container'>
                 <ResponsiveContainer width="100%" height="99%">
                     <LineChart data={data.sessions}>
-                    <Tooltip wrapperStyle={{left: -10 }} cursor={{ stroke: "rgba(0, 0, 0, 0.1)", strokeWidth: 100}} content={<CustomTooltip />}/> 
-                    <XAxis tick={{opacity: 0.5}} tickLine={false} axisLine={false} stroke="white" dataKey="day" />
+                    <Tooltip active={true} wrapperStyle={{left: -10 }}
+                     cursor={{ stroke: "rgba(0, 0, 0, 0.1)", strokeWidth: 100}} 
+                    content={<CustomTooltip />}/> 
+                    <XAxis   tick={{opacity: 0.5}}  tickLine={false} axisLine={false} stroke="white" dataKey="day" />
                     <Line type="monotone" dataKey="sessionLength" stroke="white" strokeOpacity="0.5" dot=""/>
                     </LineChart>
                 </ResponsiveContainer>
+                </div>
+
             </div>
         )
     }

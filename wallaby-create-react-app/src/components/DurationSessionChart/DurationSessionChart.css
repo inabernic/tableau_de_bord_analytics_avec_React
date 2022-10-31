@@ -1,10 +1,20 @@
 .average_duration_chart {
+    display: flex;
+    flex-flow: column;
     position: relative;
     width: 100%;
     height: 100%;
     background-color: #FF0000;
     color: white;
     border-radius: 5px;
+}
+
+.text_container {
+    height: 20%;
+}
+
+.grafic_container {
+    height: 86%;
 }
 
 .average_duration_chart h2 {
@@ -21,5 +31,11 @@
 .average_duration_tooltip {
     background-color: white;
     color: black;
-    padding: 1px 5px 1px 5px;
+    font-weight: 500;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+}
+
+.tooltip :hover {
+    background-color: aqua;
 }
