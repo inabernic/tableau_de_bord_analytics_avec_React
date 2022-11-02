@@ -1,8 +1,8 @@
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts'
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import { mockedUserActivity } from '../services/mockedData'
-import { getUserActivity } from '../services/data'
+import { mockedUserActivity } from '../../services/mockedData'
+import { getUserActivity } from '../../services/data'
 
 //STYLE
 import './ActivityChartForDay.css'

@@ -3,19 +3,14 @@ import { useParams } from 'react-router-dom'
 import React, { useState, useEffect } from 'react'
 import { getUserInfos } from '../../services/data'
 import { getMockedUserInfos } from '../../services/mockedData'
-
-import PerformanceRadarChart from'../../components/PerformanceRadarChart/PerformanceRadarChart'
-import DurationSessionChart from '../../components/DurationSessionChart/DurationSessionChart'
-import ScoreChart from '../../components/ScoreChart/ScoreChart'
-import InfoActivityforDay from '../../components/InfoActivityforDay/InfoActivityforDay'
-import ActivityChartForDay from '../../components/ActivityChartForDay/ActivityChartForDay' 
+import ActivityChartForDay from '../ActivityChartForDay/ActivityChartForDay'
 
 //STYLE
-import './UserIdPage.css'
+import './InfoActivityforDay.css'
 
 //----------------------COMPONNETS--------------------
 
-export default function UserIdPage() {
+export default function InfoActivityforDay() {
     const [data, setData] = useState([]);
 	const {id} = useParams();
     //console.log(process.env.REACT_APP_MOCKED);
@@ -41,7 +36,7 @@ export default function UserIdPage() {
 
                 <div className="nav">
                     <div className="logo cursor_pointer">
-                        <img src="../assets/Logo.PNG" alt="logoSportSee" />
+                        <img src="../../assets/Logo.PNG" alt="logoSportSee" />
                     </div>
                     <Link className="link" to="/"><div className='cursor_pointer'>Accueil</div></Link>
                     <Link className="link" to="/"><div className='cursor_pointer'>Profil</div></Link>
@@ -53,10 +48,10 @@ export default function UserIdPage() {
             <div className="container_block">
                 <div className="nav_vertical">
                     <div className='picto'>
-                        <div className='picto_pointer'> <img src="../assets/picto-meditation.png" alt="logoSportSee" /></div>
-                        <div className='picto_pointer'> <img src="../assets/picto-swimming.png" alt="logoSportSee" /></div>
-                        <div className='picto_pointer'> <img src="../assets/picto-cycling.png" alt="logoSportSee" /></div>
-                        <div className='picto_pointer'> <img src="../assets/picto-bodybuilding.png" alt="logoSportSee" /></div>
+                        <div className='picto_pointer'> <img src="../../assets/picto-meditation.png" alt="logoSportSee" /></div>
+                        <div className='picto_pointer'> <img src="../../assets/picto-swimming.png" alt="logoSportSee" /></div>
+                        <div className='picto_pointer'> <img src="../../assets/picto-cycling.png" alt="logoSportSee" /></div>
+                        <div className='picto_pointer'> <img src="../../assets/picto-bodybuilding.png" alt="logoSportSee" /></div>
                     </div>
                     <div className='picto_pointer text_vertical' > Copyright, SportSee 2020</div>
                 </div>
@@ -65,33 +60,19 @@ export default function UserIdPage() {
                         <div className='header_helloName'>Bonjour <span>{data.userInfos.firstName}</span>
                         </div>
 
-                        <div className='header_text'>Félicitation! Vous avez explosé vos objectifs hier <img src="../assets/icon_hands.png" alt="icon_hands" /></div>
+                        <div className='header_text'> Les informations sur le poids et les calories brûlées +  sur les calories, protéines, glucides et lipides de la journée. <img src="../../assets/icon_hands.png" alt="icon_hands" /></div>
                     </div>
 
                     <div className='info_block'>
                         <div className='info_left'>
                             <div className='info_activity'>
-                             <ActivityChartForDay>
-                             <Link className='link_activity' to="./activity"><InfoActivityforDay/></Link>  
-                                 </ActivityChartForDay> 
-                            
+                            <Link className='link_activity' to="./activity"><ActivityChartForDay/></Link> 
                             </div>
-
-                            <div className='info_graphic'>
-                                <div className='grafic'> 
-                                    <Link  to="./average-sessions"><DurationSessionChart/></Link>
-                                </div>
-                                <div className='grafic'>
-                                    <Link to="./performance"><PerformanceRadarChart/></Link>
-                                </div>
-                                <div className='grafic'><ScoreChart/> </div>
-                            </div>
-
                         </div>
 
                         <div className='info_right'>
                             <div className='calories'>
-                                <div className='picto'><img src="../assets/icon_calories.png" alt="icon_calories" /></div>
+                                <div className='picto'><img src="../../assets/icon_calories.png" alt="icon_calories" /></div>
                                 <div className='block_indice'>
                                     <div className='indice'>
                                      {`${data.todayScore}kCal`} 
@@ -101,7 +82,7 @@ export default function UserIdPage() {
                             </div>
 
                             <div className='proteines'>
-                                <div className='picto'><img src="../assets/icon-proteines.png" alt="icon_proteines" /></div>
+                                <div className='picto'><img src="../../assets/icon-proteines.png" alt="icon_proteines" /></div>
                                 <div className='block_indice'> 
                                     <div className='indice'>{`${data.keyData.proteinCount}g`}</div>
                                     <div>Proteines</div>
@@ -109,7 +90,7 @@ export default function UserIdPage() {
                             </div>
 
                             <div className='glucides'>
-                                <div className='picto'><img src="../assets/icon-glucides.png" alt="icon_glucides" /></div>
+                                <div className='picto'><img src="../../assets/icon-glucides.png" alt="icon_glucides" /></div>
                                 <div className='block_indice'>
                                     <div className='indice'>{`${data.keyData.carbohydrateCount}g`}</div>
                                     <div>Glucides</div>
@@ -117,7 +98,7 @@ export default function UserIdPage() {
                             </div>
 
                             <div className='lipides'>
-                                <div className='picto'><img src="../assets/icon-lipides.png" alt="icon_lipides" /></div>
+                                <div className='picto'><img src="../../assets/icon-lipides.png" alt="icon_lipides" /></div>
                                 <div className='block_indice'>
                                     <div className='indice'>{`${data.keyData.lipidCount}g`}</div>
                                     <div>Lipides</div>

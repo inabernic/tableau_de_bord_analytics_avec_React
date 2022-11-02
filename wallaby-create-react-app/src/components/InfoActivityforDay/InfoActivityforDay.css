@@ -1,0 +1,21 @@
+.info_block {
+    flex-direction: column;
+}
+
+.info_right {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.info_left {
+    width: 100%;
+}
+
+.calories,
+.proteines,
+.glucides,
+.lipides {
+    width: 23%;
+}

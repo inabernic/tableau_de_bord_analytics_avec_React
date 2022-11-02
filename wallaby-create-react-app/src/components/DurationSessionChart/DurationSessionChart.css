@@ -35,7 +35,3 @@
     padding-left: 0.3em;
     padding-right: 0.3em;
 }
-
-.tooltip :hover {
-    background-color: aqua;
-}
