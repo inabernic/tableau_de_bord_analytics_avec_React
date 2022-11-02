@@ -60,7 +60,7 @@ export default function InfoActivityforDay() {
                         <div className='header_helloName'>Bonjour <span>{data.userInfos.firstName}</span>
                         </div>
 
-                        <div className='header_text'> Les informations sur le poids et les calories brûlées +  sur les calories, protéines, glucides et lipides de la journée. <img src="../../assets/icon_hands.png" alt="icon_hands" /></div>
+                        <div className='header_text'> Les informations sur le poids et les calories brûlées +  sur les calories, protéines, glucides et lipides de la journée. </div>
                     </div>
 
                     <div className='info_block'>

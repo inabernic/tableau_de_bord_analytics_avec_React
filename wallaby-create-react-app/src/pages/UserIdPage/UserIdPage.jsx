@@ -7,7 +7,7 @@ import { getMockedUserInfos } from '../../services/mockedData'
 import PerformanceRadarChart from'../../components/PerformanceRadarChart/PerformanceRadarChart'
 import DurationSessionChart from '../../components/DurationSessionChart/DurationSessionChart'
 import ScoreChart from '../../components/ScoreChart/ScoreChart'
-import InfoActivityforDay from '../../components/InfoActivityforDay/InfoActivityforDay'
+
 import ActivityChartForDay from '../../components/ActivityChartForDay/ActivityChartForDay' 
 
 //STYLE
@@ -72,7 +72,7 @@ export default function UserIdPage() {
                         <div className='info_left'>
                             <div className='info_activity'>
                              <ActivityChartForDay>
-                             <Link className='link_activity' to="./activity"><InfoActivityforDay/></Link>  
+                             <Link className='link_activity' to="./activity"></Link>  
                                  </ActivityChartForDay> 
                             
                             </div>
