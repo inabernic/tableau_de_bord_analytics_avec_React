@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import { LineChart, XAxis, Line, Tooltip, ResponsiveContainer } from 'recharts';
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
@@ -69,7 +68,3 @@ export default function DurationSessionChart() {
         </div>
     )
 }
-
-DurationSessionChart.propTypes = {
-    average: PropTypes.array
-} 

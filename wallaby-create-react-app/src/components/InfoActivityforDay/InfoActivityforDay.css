@@ -1,22 +1,32 @@
-.info_block {
-    flex-direction: column;
-}
+ .info_block_horozontal {
+     flex-direction: column;
+ }
 
-.info_right {
-    padding-top: 4rem;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-}
+ .info_right_horozontal {
+     display: flex;
+     padding-top: 4rem;
+     align-items: center;
+     flex-direction: row;
+     justify-content: space-between;
+     width: 100%;
+     text-align-last: center;
+ }
 
-.info_left {
-    width: 100%;
-}
+ .info_left_horozontal {
+     width: 100%;
+ }
 
-.calories,
-.proteines,
-.glucides,
-.lipides {
-    width: 23%;
-}
+ .calories_horozontal,
+ .proteines_horozontal,
+ .glucides_horozontal,
+ .lipides_horozontal {
+     width: 23%;
+ }
+
+ .link-accueil {
+     color: black;
+     padding: 3rem;
+     font-size: larger;
+     font-weight: bold;
+     text-align: center;
+ }

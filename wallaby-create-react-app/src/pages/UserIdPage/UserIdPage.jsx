@@ -3,15 +3,17 @@ import { useParams } from 'react-router-dom'
 import React, { useState, useEffect } from 'react'
 import { getUserInfos } from '../../services/data'
 import { getMockedUserInfos } from '../../services/mockedData'
-
+import Nav from '../../components/Nav/Nav'
+import Navertical from '../../components//Navertical/Navertical'
 import PerformanceRadarChart from'../../components/PerformanceRadarChart/PerformanceRadarChart'
 import DurationSessionChart from '../../components/DurationSessionChart/DurationSessionChart'
 import ScoreChart from '../../components/ScoreChart/ScoreChart'
-
+import InfoRight from '../../components/InfoRight/InfoRight'
 import ActivityChartForDay from '../../components/ActivityChartForDay/ActivityChartForDay' 
 
 //STYLE
 import './UserIdPage.css'
+import InfoActivityforDay from '../../components/InfoActivityforDay/InfoActivityforDay'
 
 //----------------------COMPONNETS--------------------
 
@@ -37,29 +39,9 @@ export default function UserIdPage() {
 
     return (
         <div className="container_page">
-            <div className="nav_horisontal">
-
-                <div className="nav">
-                    <div className="logo cursor_pointer">
-                        <img src="../assets/Logo.PNG" alt="logoSportSee" />
-                    </div>
-                    <Link className="link" to="/"><div className='cursor_pointer'>Accueil</div></Link>
-                    <Link className="link" to="/"><div className='cursor_pointer'>Profil</div></Link>
-                    <Link className="link" to="/"><div className='cursor_pointer'>Réglage</div></Link>
-                    <Link className="link" to="/"><div className='cursor_pointer'>Communauté</div></Link>
-                </div>
-
-            </div>
+            <Nav/>
             <div className="container_block">
-                <div className="nav_vertical">
-                    <div className='picto'>
-                        <div className='picto_pointer'> <img src="../assets/picto-meditation.png" alt="logoSportSee" /></div>
-                        <div className='picto_pointer'> <img src="../assets/picto-swimming.png" alt="logoSportSee" /></div>
-                        <div className='picto_pointer'> <img src="../assets/picto-cycling.png" alt="logoSportSee" /></div>
-                        <div className='picto_pointer'> <img src="../assets/picto-bodybuilding.png" alt="logoSportSee" /></div>
-                    </div>
-                    <div className='picto_pointer text_vertical' > Copyright, SportSee 2020</div>
-                </div>
+               <Navertical/>
                 <div className="container_info">
                     <div className='info'>
                         <div className='header_helloName'>Bonjour <span>{data.userInfos.firstName}</span>
@@ -71,15 +53,15 @@ export default function UserIdPage() {
                     <div className='info_block'>
                         <div className='info_left'>
                             <div className='info_activity'>
-                             <ActivityChartForDay>
-                             <Link className='link_activity' to="./activity"></Link>  
-                                 </ActivityChartForDay> 
+                             
+                             <Link className='link_activity' to="./activity"><ActivityChartForDay><InfoActivityforDay/>
+                                 </ActivityChartForDay> </Link>  
                             
                             </div>
 
                             <div className='info_graphic'>
                                 <div className='grafic'> 
-                                    <Link  to="./average-sessions"><DurationSessionChart/></Link>
+                                    <Link className='link' to="./average-sessions"><DurationSessionChart/></Link>
                                 </div>
                                 <div className='grafic'>
                                     <Link to="./performance"><PerformanceRadarChart/></Link>
@@ -89,7 +71,8 @@ export default function UserIdPage() {
 
                         </div>
 
-                        <div className='info_right'>
+<InfoRight/>
+                       {/*  <div className='info_right'>
                             <div className='calories'>
                                 <div className='picto'><img src="../assets/icon_calories.png" alt="icon_calories" /></div>
                                 <div className='block_indice'>
@@ -124,7 +107,7 @@ export default function UserIdPage() {
                                 </div>
                             </div>
 
-                        </div>
+                        </div> */}
                     </div>
 
                 </div>
