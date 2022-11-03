@@ -29,7 +29,7 @@ export default function InfoRight() {
     <div className='picto'><img src="../assets/icon_calories.png" alt="icon_calories" /></div>
     <div className='block_indice'>
         <div className='indice'>
-         {`${data.todayScore}kCal`} 
+         {`${data.keyData.calorieCount}kCal`} 
             </div>
         <div>Calories</div>
     </div>

@@ -6,7 +6,6 @@ import Dashboard from '../pages/Dashboard/Dashboard'
 import Error from '../pages/Error/Error'
 import UserIdPage from '../pages/UserIdPage/UserIdPage'
 //import UserActivity from '../components/UserActivity'
-import InfoACInfoActivityforDaytivityforDay from '../components/InfoActivityforDay/InfoActivityforDay'
 //import ActivityChartForDay from '../components/ActivityChartForDay/ActivityChartForDay'
 import PerformanceRadarChart from '../components/PerformanceRadarChart/PerformanceRadarChart'
 import DurationSessionChart from "../components/DurationSessionChart/DurationSessionChart";
