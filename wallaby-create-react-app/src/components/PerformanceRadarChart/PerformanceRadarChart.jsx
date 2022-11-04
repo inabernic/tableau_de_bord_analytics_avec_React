@@ -7,11 +7,9 @@ import { getUserPerformance } from '../../services/data'
 import './PerformanceRadarChart.css'
 
 export default function PerformanceRadarChart() {
-
     const [data, setData] = useState([]);
-    const { id} = useParams();
+    const { id } = useParams();
     //console.log(process.env.REACT_APP_MOCKED);
-
     useEffect(() => {
         let getData = async () => {
             let request = await mockUserPerformance(id);
@@ -25,9 +23,6 @@ export default function PerformanceRadarChart() {
         getData();
     }, [id]);
     if (data.length === 0) return null;
-
-
-
 
     /*   let kinds = { "cardio": "Cardio", "energy": "Energie", "endurance": "Endurance","strength": "Force","speed": "Vitesse", "intensity": "Intensité"}
         let kinds_order = {"Cardio": 1, "Energie": 2, "Endurance": 3, "Force": 4, "Vitesse": 5, "Intensité": 6}
@@ -63,7 +58,7 @@ export default function PerformanceRadarChart() {
             <ResponsiveContainer width="100%" height="100%">
                 <RadarChart cx="50%" cy="50%" outerRadius="70%" data={data[0].data}>
                     <PolarGrid stroke="white" radialLines={false} />
-                    <PolarAngleAxis  label={data[0].kind} stroke="white" tick={{ fontSize: 12, fontWeight: 500, }} tickLine={false}  />
+                    <PolarAngleAxis label={data[0].kind} stroke="white" tick={{ fontSize: 12, fontWeight: 500, }} tickLine={false} />
                     <Radar stroke="transparent" dataKey="value" fill="#FF0101" fillOpacity={0.6} />
                 </RadarChart>
             </ResponsiveContainer>

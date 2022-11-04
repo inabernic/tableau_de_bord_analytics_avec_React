@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { mockUserAverageSessions } from '../../services/mockedData'
 import { getUserAverageSessions } from '../../services/data'
-
 import './DurationSessionChart.css'
 
 export default function DurationSessionChart() {
@@ -17,7 +16,6 @@ export default function DurationSessionChart() {
                 console.log("real server call");
                 request = await getUserAverageSessions(id)
             };
-            //console.log(request);
             if (!request) return alert('data error in the ActivityChartForDay');
             setData(request);
         };
@@ -52,7 +50,6 @@ export default function DurationSessionChart() {
             <div className='text_container'>
                 <h2>Durée moyenne des sessions</h2>
             </div>
-
             <div className='grafic_container'>
                 <ResponsiveContainer width="100%" height="99%">
                     <LineChart data={data.sessions}>
@@ -64,7 +61,6 @@ export default function DurationSessionChart() {
                     </LineChart>
                 </ResponsiveContainer>
             </div>
-
         </div>
     )
 }
