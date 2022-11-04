@@ -35,9 +35,9 @@ export default function InfoActivityforDay() {
 
     return (
         <div className="container_page">
-            {/* <Nav/> */}
+             <Nav/> 
             <div className="container_block">
-                {/* <Navertical/> */}
+               <Navertical/> 
                 <div className="container_info">
                     <div className='info'>
 

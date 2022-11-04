@@ -8,7 +8,7 @@ export default function Nav() {
 
         <div className="nav">
             <div className="logo cursor_pointer">
-                 <img src="../assets/Logo.PNG" alt="logoSportSee" /> 
+                 <img src="../../assets/Logo.PNG" alt="logoSportSee" /> 
             </div>
             <Link className="link" to="/"><div className='cursor_pointer'>Accueil</div></Link>
             <Link className="link" to="/"><div className='cursor_pointer'>Profil</div></Link>

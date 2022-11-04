@@ -20,6 +20,9 @@ export default function ScoreChart() {
             };
             //console.log(request.todayScore);
             if (!request) return alert('data error');
+            if(!request.todayScore){
+                request.todayScore = request.score
+            }
             setData(request);
         };
         //console.log(data.todayScore);
