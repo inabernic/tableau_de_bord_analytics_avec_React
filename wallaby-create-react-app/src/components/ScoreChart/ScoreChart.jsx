@@ -26,15 +26,14 @@ export default function ScoreChart() {
         getData();
     }, [id]);
     if (data.length === 0) return null;
-    const PieData =  [{value: data.todayScore}];
 
     return (
         <div className="goal_chart">
             <h2 className="goal_title">Score</h2>
             <PieChart width={800} height={250}>
                 <Pie
-                    data={PieData}
-                    dataKey="value"
+                    data={[data]}
+                    dataKey="todayScore"
                     startAngle={90}
                     endAngle={210}
                     innerRadius={60}
