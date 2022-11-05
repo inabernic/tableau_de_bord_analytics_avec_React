@@ -27,23 +27,36 @@ export default function ScoreChart() {
     }, [id]);
     if (data.length === 0) return null;
 
+    console.log(data)
+    console.log(data.todayScore)
+
+    
+    const PieData =  [{value: data.todayScore}];
+
     return (
         <div className="goal_chart">
             <h2 className="goal_title">Score</h2>
-            <PieChart >
-                <Pie data={data.todayScore} dataKey="value"
-                    nameKey="name"
-                    cx="50%"
-                    cy="50%"
+
+            <PieChart width={800} height={250}>
+                <Pie
+                    data={PieData}
+                    //dataKey="todayScore"
+                    dataKey="value"
+                    
+                    //cx="50%"
+                    //cy="50%"
                     startAngle={90}
-                    endAngle={180}
+                    endAngle={210}
                     innerRadius={60}
                     outerRadius={70}
                     fill="#8884d8"
-                    paddingAngle={5}>
+                    paddingAngle={5}
+
+                >
                     <Cell fill="red" cornerRadius="50%" />
                 </Pie>
             </PieChart>
+
             <div className="goal_content">
                 <p className="percentage">{data.todayScore * 100} %</p>
                 <p className="legend">de votre</p>

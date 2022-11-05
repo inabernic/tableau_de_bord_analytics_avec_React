@@ -1,6 +1,6 @@
 .radar_bar_chart {
-    width: 100%;
-    height: 100%;
+    width: 250px;
+    height: 250px;
     background-color: #282D30;
     border-radius: 5px;
 }
