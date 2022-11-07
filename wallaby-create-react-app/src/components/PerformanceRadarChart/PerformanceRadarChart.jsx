@@ -18,19 +18,20 @@ export default function PerformanceRadarChart() {
                 request = await getUserPerformance(id)
             };
             if (!request) return alert('data error in the PerformanceRadar');
-            setData(request);
-        };
-        getData();
-    }, [id]);
-    if (data.length === 0) return null;
 
-    /*   let kinds = { "cardio": "Cardio", "energy": "Energie", "endurance": "Endurance","strength": "Force","speed": "Vitesse", "intensity": "Intensité"}
-        let kinds_order = {"Cardio": 1, "Energie": 2, "Endurance": 3, "Force": 4, "Vitesse": 5, "Intensité": 6}
-
+            const kinds = { "cardio": "Cardio", "energy": "Energie", "endurance": "Endurance","strength": "Force","speed": "Vitesse", "intensity": "Intensité"}
+            let kinds_order = {"Cardio": 1, "Energie": 2, "Endurance": 3, "Force": 4, "Vitesse": 5, "Intensité": 6}
+            const performance = request[0]
+console.log(performance)
         // translates kinds into French
         for (let element in performance.kind) {
+            console.log(element)
             performance.kind[element] = kinds[performance.kind[element]]
         }
+        console.log(performance)
+        console.log(request)
+
+
         // attribute the corresponding kind for each data
         for (let element in performance.data) {
             performance.data[element].kind = performance.kind[parseInt(element, 10) +1]
@@ -40,25 +41,24 @@ export default function PerformanceRadarChart() {
         for (let element of performance.data) {
             element.id = kinds_order[element.kind]
         }
-        performance.data.sort((a, b) => (a.id > b.id) ? 1 : -1)
-        // update the state
-        this.setState({data: performance.data, dataIsLoading: true})   */
+            setData(request);
+        };
 
-    /* 
-        const kinds = { "cardio": "Cardio", "energy": "Energie", "endurance": "Endurance","strength": "Force","speed": "Vitesse", "intensity": "Intensité"}
-        let perf = data.kind
-        for (let element of perf) {
-            if (element.kind in kinds) {
-                element.kind = kinds[element.kind]
-            }
-        } */
+        getData();
+    }, [id]);
+    if (data.length === 0) return null;
+
+    console.log(data[0].data)
+    console.log(data[0].kind)
+
 
     return (
         <div className="radar_bar_chart">
             <ResponsiveContainer width="100%" height="100%">
                 <RadarChart cx="50%" cy="50%" outerRadius="70%" data={data[0].data}>
                     <PolarGrid stroke="white" radialLines={false} />
-                    <PolarAngleAxis label={data[0].kind} stroke="white" tick={{ fontSize: 12, fontWeight: 500, }} tickLine={false} />
+                    <PolarAngleAxis  stroke="white" dataKey="kind" tick={{ fontSize: 12, fontWeight: 500, }} tickLine={false}>
+                    </PolarAngleAxis>
                     <Radar stroke="transparent" dataKey="value" fill="#FF0101" fillOpacity={0.6} />
                 </RadarChart>
             </ResponsiveContainer>
