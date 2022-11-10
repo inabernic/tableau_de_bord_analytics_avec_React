@@ -13,18 +13,23 @@ export default function PerformanceRadarChart() {
     useEffect(() => {
         let getData = async () => {
             let request = await mockUserPerformance(id);
+            console.log(request)
             if (process.env.REACT_APP_MOCKED === "false") {
                 request = await getUserPerformance(id)
-                 //console.log(request)
+                console.log(request)
             };
             if (!request) return alert('data error in the PerformanceRadar');
 
-            const kinds = { "cardio": "Cardio","energy": "Energie", "endurance": "Endurance","strength": "Force","speed": "Vitesse", "intensity": "Intensité"}
+             const kinds = { "cardio": "Cardio","energy": "Energie", "endurance": "Endurance","strength": "Force","speed": "Vitesse", "intensity": "Intensité"} 
            
         // translates kinds into French
-         for (let element in request.kind) {
-            request.kind[element] = kinds[request.kind[element]]
-        } 
+          for (let element in request.kind) {
+            //verification if there is translation
+            if(kinds[request.kind[element]]){
+                request.kind[element] = kinds[request.kind[element]]
+                console.log(request.kind[element])
+            }
+        }  
         //change the place of the elements
         request.data.sort((a, b) => (a.id > b.id) ? 1 : -1)
             setData(request);
@@ -38,7 +43,7 @@ export default function PerformanceRadarChart() {
             <ResponsiveContainer width="100%" height="100%">
                 <RadarChart cx="50%" cy="50%" outerRadius="62%" data={data.data}>
                     <PolarGrid stroke="white" radialLines={false} />
-                    <PolarAngleAxis  tickFormatter={(tickItem) => data.kind[tickItem]} stroke="white" dataKey="kind" tick={{ fontSize: 12, fontWeight: 500, }} tickLine={false} >
+                    <PolarAngleAxis tickFormatter={(tickItem) => data.kind[tickItem]} stroke="white" dataKey="kind" tick={{ fontSize: 12, fontWeight: 500, }} tickLine={false} >
                     </PolarAngleAxis>
                     <Radar stroke="transparent" dataKey="value" fill="#FF0101" fillOpacity={0.6} />
                 </RadarChart>
