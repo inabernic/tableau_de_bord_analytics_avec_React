@@ -13,7 +13,6 @@ export default function DurationSessionChart() {
         let getData = async () => {
             let request = await mockUserAverageSessions(id);
             if (process.env.REACT_APP_MOCKED === "false") {
-                console.log("real server call");
                 request = await getUserAverageSessions(id)
             };
             if (!request) return alert('data error in the ActivityChartForDay');

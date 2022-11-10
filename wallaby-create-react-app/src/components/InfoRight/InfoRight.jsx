@@ -12,7 +12,6 @@ export default function InfoRight() {
         const getData = async () => {
             let request = await getMockedUserInfos(id);
             if (process.env.REACT_APP_MOCKED === "false") {
-                console.log("real server call");
                 request = await getUserInfos(id)
             };
             if (!request) return alert('data error');

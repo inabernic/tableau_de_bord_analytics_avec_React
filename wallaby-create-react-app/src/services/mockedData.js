@@ -68,7 +68,7 @@ export const mockUserPerformance = async (id) => {
 	try {
 		const res = USER_PERFORMANCE.filter((el) => el.userId.toString() === id);
 		//console.log(res[0]);
-		return res;
+		return res[0];
 	} catch (e) {
 		console.log(e);
 	}

@@ -21,7 +21,7 @@
   "scripts": {
     "start": "react-dotenv && react-scripts start",
     "build": "react-dotenv && react-scripts build",
-    "serve": "set PORT=3001 && react-dotenv && serve build",
+    "serve": "react-dotenv && serve build",
     "test": "react-dotenv && react-scripts test",
     "eject": "react-dotenv && react-scripts eject"
   },

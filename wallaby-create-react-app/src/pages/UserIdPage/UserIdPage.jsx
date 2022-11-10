@@ -15,7 +15,6 @@ import InfoActivityforDay from '../../components/InfoActivityforDay/InfoActivity
 //STYLE
 import './UserIdPage.css'
 
-
 export default function UserIdPage() {
     const [data, setData] = useState([]);
     const { id } = useParams();
@@ -23,7 +22,8 @@ export default function UserIdPage() {
         const getData = async () => {
             let request = await getMockedUserInfos(id);
             if (process.env.REACT_APP_MOCKED === "false") {
-                console.log("real server call");
+                //read the calls API
+                console.log(process.env.REACT_APP_API);
                 request = await getUserInfos(id)
             };
             if (!request) return alert('data error');
@@ -55,7 +55,7 @@ export default function UserIdPage() {
                                     <Link className='link' to="./average-sessions"><DurationSessionChart /></Link>
                                 </div>
                                 <div className='grafic'>
-                                    <Link to="./performance"><PerformanceRadarChart /></Link>
+                                    <Link className='link' to="./performance"><PerformanceRadarChart /></Link>
                                 </div>
                                 <div className='grafic'><ScoreChart /> </div>
                             </div>

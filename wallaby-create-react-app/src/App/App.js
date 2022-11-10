@@ -5,9 +5,10 @@ import { Routes, Route } from "react-router-dom";
 import Dashboard from '../pages/Dashboard/Dashboard'
 import Error from '../pages/Error/Error'
 import UserIdPage from '../pages/UserIdPage/UserIdPage'
-import PerformanceRadarChart from '../components/PerformanceRadarChart/PerformanceRadarChart'
-import DurationSessionChart from "../components/DurationSessionChart/DurationSessionChart";
+//import PerformanceRadarChart from '../components/PerformanceRadarChart/PerformanceRadarChart'
+import LinkDurationSessionChart from '../components/LinkDurationSessionChart/LinkDurationSessionChart'
 import InfoActivityforDay from "../components/InfoActivityforDay/InfoActivityforDay";
+import LinkPerformanceRadarChart from "../components/LinkPerformanceRadarChart/LinkPerformanceRadarChart"
 
 // STYLE-------------------------------------------
 import './App.css';
@@ -18,8 +19,8 @@ export default function App() {
       <Route exact path="/" element={<Dashboard />} />
       <Route exact path="/user/:id" element={<UserIdPage />} />
       <Route exact path="/user/:id/activity" element={<InfoActivityforDay />} />
-      <Route exact path="/user/:id/average-sessions" element={<DurationSessionChart />} />
-      <Route exact path="/user/:id/performance" element={<PerformanceRadarChart />} />
+      <Route exact path="/user/:id/average-sessions" element={<LinkDurationSessionChart />} />
+      <Route exact path="/user/:id/performance" element={<LinkPerformanceRadarChart />} />
       <Route path='/*' exact={true} element={<Error />} />
     </Routes>
   );
