@@ -13,13 +13,10 @@ export default function PerformanceRadarChart() {
     useEffect(() => {
         let getData = async () => {
             let request = await mockUserPerformance(id);
-            console.log(request)
             if (process.env.REACT_APP_MOCKED === "false") {
                 request = await getUserPerformance(id)
-                console.log(request)
             };
             if (!request) return alert('data error in the PerformanceRadar');
-
              const kinds = { "cardio": "Cardio","energy": "Energie", "endurance": "Endurance","strength": "Force","speed": "Vitesse", "intensity": "Intensité"} 
            
         // translates kinds into French
@@ -27,7 +24,7 @@ export default function PerformanceRadarChart() {
             //verification if there is translation
             if(kinds[request.kind[element]]){
                 request.kind[element] = kinds[request.kind[element]]
-                console.log(request.kind[element])
+                //console.log(request.kind[element])
             }
         }  
         //change the place of the elements

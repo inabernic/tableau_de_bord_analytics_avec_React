@@ -34,7 +34,7 @@ export default function ScoreChart() {
                     data={[data]}
                     dataKey="todayScore"
                     startAngle={90}
-                    endAngle={210}
+                    endAngle= {90 + (data.todayScore * 360)}
                     innerRadius={60}
                     outerRadius={70}
                     fill="#8884d8"

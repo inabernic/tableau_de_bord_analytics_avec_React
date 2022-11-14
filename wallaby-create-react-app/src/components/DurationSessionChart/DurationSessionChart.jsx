@@ -32,6 +32,7 @@ export default function DurationSessionChart() {
         }
     }
 
+    //Customize the legend tooltip
     const CustomTooltip = ({ payload, active }) => {
         if (active) {
             return (
