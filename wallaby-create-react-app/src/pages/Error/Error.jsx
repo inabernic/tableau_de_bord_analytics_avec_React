@@ -14,7 +14,7 @@ export default function Error() {
 
                 <div className="nav">
                     <div className="logo cursor_pointer">
-                        <img src="../assets/Logo.PNG" alt="logoSportSee" />
+                        <img src="../../assets/Logo.PNG" alt="logoSportSee" />
                     </div>
                     <Link className="link" to="/"><div className='cursor_pointer'>Accueil</div></Link>
                     <Link className="link" to="/"><div className='cursor_pointer'>Profil</div></Link>
@@ -26,10 +26,10 @@ export default function Error() {
             <div className="container_block">
                 <div className="nav_vertical">
                     <div className='picto'>
-                        <div className='picto_pointer'> <img src="../assets/picto-meditation.png" alt="logoSportSee" /></div>
-                        <div className='picto_pointer'> <img src="../assets/picto-swimming.png" alt="logoSportSee" /></div>
-                        <div className='picto_pointer'> <img src="../assets/picto-cycling.png" alt="logoSportSee" /></div>
-                        <div className='picto_pointer'> <img src="../assets/picto-bodybuilding.png" alt="logoSportSee" /></div>
+                        <div className='picto_pointer'> <img src="../../assets/picto-meditation.png" alt="logoSportSee" /></div>
+                        <div className='picto_pointer'> <img src="../../assets/picto-swimming.png" alt="logoSportSee" /></div>
+                        <div className='picto_pointer'> <img src="../../assets/picto-cycling.png" alt="logoSportSee" /></div>
+                        <div className='picto_pointer'> <img src="../../assets/picto-bodybuilding.png" alt="logoSportSee" /></div>
                     </div>
                     <div className='picto_pointer text_vertical' > Copyright, SportSee 2020</div>
                 </div>
