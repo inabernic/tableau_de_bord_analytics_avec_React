@@ -10,7 +10,6 @@ import './ScoreChart.css'
  * @return {JSX}  
  */
 export default function ScoreChart({data}) {
-    console.log({data})
     const score = [
         { value: data.todayScore || data.score},
         { value: 1 - data.todayScore || data.score }, 

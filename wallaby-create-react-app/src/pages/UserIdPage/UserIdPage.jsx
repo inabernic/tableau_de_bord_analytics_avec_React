@@ -53,7 +53,7 @@ export default function UserIdPage() {
                             </div>
                             <div className='info_graphic'>
                                 <div className='grafic'>
-                                    <Link className='link' to="./average-sessions"><DurationSessionChart /></Link>
+                                    <Link className='link' to="./average-sessions"><DurationSessionChart/></Link>
                                 </div>
                                 <div className='grafic'>
                                     <Link className='link' to="./performance"><PerformanceRadarChart /></Link>

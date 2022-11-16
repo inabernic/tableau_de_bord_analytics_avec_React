@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { mockedUserActivity } from '../../services/mockedData'
 import { getUserActivity } from '../../services/data'
+import { Activity } from '../../model/Activity'
 
 //STYLE
 import './ActivityChartForDay.css'
@@ -18,7 +19,7 @@ export default function ActivityChartForDay() {
         console.log("real server call");
         request = await getUserActivity(id)
       };
-      // console.log(request);
+       console.log(request);
       if (!request) return alert('data error in the ActivityChartForDay');
       setData(request);
     };

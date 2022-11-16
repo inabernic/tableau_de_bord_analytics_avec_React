@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { Activity } from '../model/Activity';
 
 /**
  * Get user infos
@@ -25,7 +26,8 @@ export const getUserInfos = async (id) => {
 export const getUserActivity = async (id) => {
     try {
         const res = await axios.get(`http://${process.env.REACT_APP_API}/user/${id}/activity`);
-        return res.data.data;
+        let activity = new Activity(id, res.data.data.sessions);
+        return activity;
     } catch (e) {
         console.log(e);
     }
