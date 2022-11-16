@@ -67,6 +67,5 @@ export default function DurationSessionChart() {
 }
 
 DurationSessionChart.propTypes = {
-    id: PropTypes.string,
-    sessions:PropTypes.array
+   average: PropTypes.array
   };

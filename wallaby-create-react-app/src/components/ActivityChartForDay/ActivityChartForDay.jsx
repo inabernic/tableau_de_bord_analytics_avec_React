@@ -19,7 +19,7 @@ export default function ActivityChartForDay() {
         console.log("real server call");
         request = await getUserActivity(id)
       };
-       console.log(request);
+       //console.log(request);
       if (!request) return alert('data error in the ActivityChartForDay');
       setData(request);
     };
