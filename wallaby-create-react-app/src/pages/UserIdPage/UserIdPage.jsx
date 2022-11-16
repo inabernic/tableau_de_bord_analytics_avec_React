@@ -58,7 +58,7 @@ export default function UserIdPage() {
                                 <div className='grafic'>
                                     <Link className='link' to="./performance"><PerformanceRadarChart /></Link>
                                 </div>
-                                <div className='grafic'><ScoreChart /> </div>
+                                <div className='grafic'><ScoreChart data={data}/> </div>
                             </div>
                         </div>
                         <InfoRight />
