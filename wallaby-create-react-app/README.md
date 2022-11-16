@@ -1,3 +1,11 @@
+# Create the file .env at the root of the project
+Add the variable:
+REACT_APP_API =  'localhost:3000'
+REACT_APP_MOCKED =  'false' or 'true'
+
+true- to read data from local file
+false - to read data from API call
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import React, { useState, useEffect } from 'react'
@@ -67,3 +68,7 @@ export default function UserIdPage() {
         </div >
     )
 }
+
+UserIdPage.propTypes = {
+    firstName:  PropTypes.string
+  };
