@@ -4,6 +4,7 @@ import {
 	USER_MAIN_DATA,
 	USER_PERFORMANCE,
 } from "../data/data";
+import { Activity } from "../model/Activity";
 
 /**
  * Get user infos
@@ -32,7 +33,8 @@ export const getMockedUserInfos = async (id) => {
 export const mockedUserActivity = async (id) => {
 	try {
 		let res = USER_ACTIVITY.filter((el) => el.userId.toString() === id);
-		return res[0];
+		let activity = new Activity(id, res[0].sessions)
+		return activity;
 	} catch (e) {
 		console.log(e);
 	}

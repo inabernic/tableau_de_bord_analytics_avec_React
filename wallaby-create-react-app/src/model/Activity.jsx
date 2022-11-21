@@ -4,4 +4,7 @@ export class Activity {
     this.userId = userId;
     this.sessions = sessions;
   }
+  toString(){
+   return this.userId;
+  }
 }
